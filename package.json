@@ -1,0 +1,12 @@
+{
+  "name": "moodview",
+  "version": "1.0.0",
+  "description": "An interactive emotional map of the world",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 3000 -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 

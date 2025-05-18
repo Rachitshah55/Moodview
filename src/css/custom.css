@@ -1,0 +1,103 @@
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Card styles */
+.location-card {
+    animation: fadeIn 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal animations */
+.modal-content {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Weather backgrounds */
+.weather-sunny {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.weather-rainy {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.weather-cloudy {
+    background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+}
+
+.weather-snowy {
+    background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+}
+
+/* Mood colors */
+.mood-energetic {
+    color: #ffd700;
+}
+
+.mood-calm {
+    color: #4facfe;
+}
+
+.mood-mellow {
+    color: #a8c0ff;
+}
+
+.mood-dreamy {
+    color: #b06ab3;
+}
+
+/* Sound control */
+.sound-control {
+    transition: all 0.3s ease;
+}
+
+.sound-control:hover {
+    transform: scale(1.1);
+}
+
+.sound-control.playing {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Loading spinner */
+.loading-spinner {
+    border-top-color: #3498db;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .location-card {
+        margin-bottom: 1rem;
+    }
+    
+    .modal-content {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+} 
